@@ -1,39 +1,45 @@
 {
-   "name": "Spotify Web Player Hotkeys",
-   "description": "Add keyboard shortcuts to pause, play next and previous tracks in Spotify",
-   "version": "0.3",
-   "manifest_version": 2,
-   "icons": {
-      "128": "icon.png"
-   },
-
-   "incognito": "split",
-   "background": {
-      "persistent": false,
-      "scripts": [ "background.js" ]
-   },
-   "commands": {
-      "next": {
-         "description": "Next track",
-         "suggested_key": "Alt+Shift+Period"
-      },
-      "play-pause": {
-         "description": "Play/pause",
-         "suggested_key": "Alt+Shift+P"
-      },
-      "previous": {
-         "description": "Previous track",
-         "suggested_key": "Alt+Shift+Comma"
-      },
-      "shuffle": {
-         "description": "Shuffle"
-      },
-      "repeat": {
-         "description": "Repeat"
-      },
-      "track-add": {
-         "description": "Save track"
-      }
-   },
-   "permissions": [ "https://play.spotify.com/*"  ]
+    "name": "Spotify Web Player Hotkeys",
+    "description": "Add keyboard shortcuts to pause, play next and previous tracks in Spotify",
+    "version": "0.4",
+    "manifest_version": 2,
+    "icons": {
+        "128": "icon.png"
+    },
+    "incognito": "split",
+    "background": {
+        "persistent": false,
+        "scripts": [ "background.js" ]
+    },
+    "commands": {
+        "next": {
+            "description": "Next track",
+            "suggested_key": "Alt+Shift+Period"
+        },
+        "play-pause": {
+            "description": "Play/pause",
+            "suggested_key": "Alt+Shift+P"
+        },
+        "previous": {
+            "description": "Previous track",
+            "suggested_key": "Alt+Shift+Comma"
+        },
+        "shuffle": {
+            "description": "Shuffle"
+        },
+        "repeat": {
+            "description": "Repeat"
+        },
+        "track-add": {
+            "description": "Save track"
+        }
+    },
+    "permissions": [
+        "storage",
+        "https://play.spotify.com/*" 
+    ],
+    "options_ui": {
+        "page": "options.html",
+        "chrome_style": true
+    }
 }
